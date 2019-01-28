@@ -1,0 +1,15 @@
+ 题库标：
+tbl_question
+id、question_title、weight
+
+ 答案表：
+ tbl_answer
+id、questtion_id、description、score、score_1、score_2。。。
+
+用户答题记录表：
+tbl_log
+
+user_id、question_id、answer_id
+
+
+user_id、question_id、answer_id、weight、question_title、score、score_1、score_2

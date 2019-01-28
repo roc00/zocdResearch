@@ -1,0 +1,16 @@
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1068px;
+}
+
+.main-content{
+    width: 790px;
+    margin-top: 164px;
+}
+
+.main-sidebar{
+    position: fixed;
+    top: 0;
+    left: calc(50vw + 250px);
+}

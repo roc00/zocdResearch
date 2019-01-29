@@ -12,12 +12,12 @@ export class ListA extends React.Component {
 
     const question = dataA.map(list => {
       return (
-        <div>
-          <h2 className="question" id={dataA.indexOf(list)}>{dataA.indexOf(list)+1}. {list.title}</h2>
+        <section id={"section-" + dataA.indexOf(list)}>
+          <h2 className="question" >{dataA.indexOf(list)+1}. {list.title}</h2>
           <p className="example">{list.example}</p>
           <p className="path"><span>{list.parentLocation}</span><span>{list.childLocation}</span></p>
           <Answers/>
-        </div>
+        </section>
       )
     });
 

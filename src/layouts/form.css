@@ -12,6 +12,10 @@
   --text-color-disable: #CBCCD1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-color-main);
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
@@ -115,6 +119,11 @@ a:hover{
 /* title of each question --------------------------------------------------  */
 
 /* Question */
+section {
+  padding-top: 160px;
+}
+
+
 .question {
   font-size: 28px;
   max-width: 730px;
@@ -191,7 +200,7 @@ a:hover{
 /* Every item in model */
 .item {
   width: 730px;
-  height: 388px;
+  height: 268px;
   display: flex;
   justify-content: space-between;
 }
@@ -352,20 +361,36 @@ a:hover{
 .sidebar-list{
   font-size: 12px;
   line-height: 20px;
-  padding: 8px 0 0 0px;
+  padding: 8px 0 0 20px;
   margin: 0;
   max-width: 258px;
   overflow-y: auto;
   height: calc(100vh - 204px);
 }
+.sidebar-list li{
+  /* position: sticky;
+  top: 0px; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.current li{
+  background: #ebebeb;
+  font-weight: bold;
+  color: var(--button-color);
+  z-index: 10;
+}
+
+
 
 .sidebar-item {
   margin: 12px 0;
 }
 
 .sidebar-item:hover{
-  color: var(--button-color);
-  cursor: pointer;
+  /* color: var(--button-color); */
+  /* cursor: pointer; */
 }
 
 
@@ -386,7 +411,6 @@ a:hover{
 .sidebar-list::-webkit-scrollbar-track {
   background: transparent;
 }
-
 
 
 

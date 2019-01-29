@@ -11,7 +11,7 @@ export class SideBarA extends React.Component {
   render() {
     const catalog = dataA.map(list =>{
       return (
-        <a href={"#" + Number(dataA.indexOf(list))} ><li className="sidebar-item">{dataA.indexOf(list)+1}. {list.title}</li></a>
+        <a href={"#" + "section-" +  Number(dataA.indexOf(list))} ><li className="sidebar-item">{dataA.indexOf(list)+1}. {list.title}</li></a>
       )
     })
 

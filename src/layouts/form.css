@@ -216,7 +216,7 @@ section {
   background: var(--card-color);
   border-radius: 16px;
   box-shadow: 0 8px 12px 0 rgba(198, 208, 235, 0.15);
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
   line-height: 320px;
   text-align: center;
   font-weight: 400;
@@ -309,10 +309,10 @@ section {
   text-align: center;
   line-height: 60px;
   color: var(--card-color);
-  margin: 80px auto 200px auto;
+  margin: 240px auto 120px auto;
   cursor: pointer;
   box-shadow: 0 16px 48px -12px var(--front-color);
-  transition: all 0.1s; 
+  transition: all 0.3s; 
   user-select: none;
   text-decoration: none;
 }
@@ -320,6 +320,7 @@ section {
 .commit:hover{
   filter: brightness(1.12);
   transform: translateY(-2px);
+  box-shadow: 0 16px 48px -8px var(--front-color);
 }
 
 .commit:active{
@@ -361,7 +362,7 @@ section {
 .sidebar-list{
   font-size: 12px;
   line-height: 20px;
-  padding: 8px 0 0 20px;
+  padding: 8px 0 0 0px;
   margin: 0;
   max-width: 258px;
   overflow-y: auto;
@@ -376,16 +377,18 @@ section {
 }
 
 .current li{
-  background: #ebebeb;
+  /* background: #fff; */
   font-weight: bold;
   color: var(--button-color);
   z-index: 10;
+  /* border-radius: 2px solid #ebebeb; */
 }
 
 
 
 .sidebar-item {
-  margin: 12px 0;
+  background: url('http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg') no-repeat -535px -2px;
+	padding: 4px 0 4px 20px;
 }
 
 .sidebar-item:hover{
@@ -431,4 +434,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   width: 600px;
+}
+#checked{
+  background: url('http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg') no-repeat -535px -24px;;
 }

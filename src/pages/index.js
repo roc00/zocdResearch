@@ -1,12 +1,12 @@
 import React from "react";
 import Link from 'gatsby-link';
 import "../layouts/layout.css";
-import "../layouts/scrollingNav.js";
+import "../layouts/scrollingNav";
 import Nav from "../components/header";
 import Button from "../components/button";
 import {ListA, ListB, ListC, ListD, ListE} from "../components/Item";
 import {SideBarA, SideBarB, SideBarC, SideBarD, SideBarE} from "../components/sideBar";
-import {valsA, valsB, valsC, valsD, valsE} from "../layouts/submit";
+import {aim, valsA, valsB, valsC, valsD, valsE} from "../layouts/submit";
 
 
 class IndexPage extends React.Component {
@@ -22,9 +22,9 @@ class IndexPage extends React.Component {
         <div className="main">
           <div className="main-content">
             <ListA />
-            <Link to="/moduleB/">
+            {/* <Link > */}
               <Button buttonName="提交，进入下一个模块" uniqueKey={valsA} />
-            </Link>
+            {/* </Link> */}
           </div>
           <div className="main-sidebar">
             <SideBarA />

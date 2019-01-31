@@ -558,43 +558,43 @@ export const dataA = [
   //     '理财模块是否提供了足够多数量的产品供用户选择，单个分类下的产品数大于10?',
   //   example: '（特色、高端类产品除外）',
   // },
-  {
-    parentLocation: '理财',
-    childLocation: '选/买理财/持有理财',
-    title:
-      '理财买入过程内容层次是否分明，能够突出买入数量的数量，并有可用资金数据展示？',
-    example: '',
-  },
-  {
-    parentLocation: '理财',
-    childLocation: '选/买理财/持有理财',
-    title: '产品详情页是否用普通的方式展示了产品基础信息?',
-    example: '例如收益、产品简介、构成等;',
-  },
-  {
-    parentLocation: '理财',
-    childLocation: '选/买理财/持有理财',
-    title: '产品详情页是否用图形展示了产品申赎过程中的各个节点?',
-    example: '例如资金锁定日、收益计算日、资金到账日等？',
-  },
-  {
-    parentLocation: '理财',
-    childLocation: '选/买理财/持有理财',
-    title: '产品详情页是否有特殊的数据帮用户决策?',
-    example: '例如排名走势、历史持仓变动可视化等;',
-  },
-  {
-    parentLocation: '理财',
-    childLocation: '选/买理财/持有理财',
-    title: '理财模块是否提供了收藏夹、理财自选的功能？',
-    example: '',
-  },
-  {
-    parentLocation: '社区',
-    childLocation: '浏览/观望',
-    title: '是否有社区功能或者社区的概念，完善程度怎么样？',
-    example: '',
-  },
+  // {
+  //   parentLocation: '理财',
+  //   childLocation: '选/买理财/持有理财',
+  //   title:
+  //     '理财买入过程内容层次是否分明，能够突出买入数量的数量，并有可用资金数据展示？',
+  //   example: '',
+  // },
+  // {
+  //   parentLocation: '理财',
+  //   childLocation: '选/买理财/持有理财',
+  //   title: '产品详情页是否用普通的方式展示了产品基础信息?',
+  //   example: '例如收益、产品简介、构成等;',
+  // },
+  // {
+  //   parentLocation: '理财',
+  //   childLocation: '选/买理财/持有理财',
+  //   title: '产品详情页是否用图形展示了产品申赎过程中的各个节点?',
+  //   example: '例如资金锁定日、收益计算日、资金到账日等？',
+  // },
+  // {
+  //   parentLocation: '理财',
+  //   childLocation: '选/买理财/持有理财',
+  //   title: '产品详情页是否有特殊的数据帮用户决策?',
+  //   example: '例如排名走势、历史持仓变动可视化等;',
+  // },
+  // {
+  //   parentLocation: '理财',
+  //   childLocation: '选/买理财/持有理财',
+  //   title: '理财模块是否提供了收藏夹、理财自选的功能？',
+  //   example: '',
+  // },
+  // {
+  //   parentLocation: '社区',
+  //   childLocation: '浏览/观望',
+  //   title: '是否有社区功能或者社区的概念，完善程度怎么样？',
+  //   example: '',
+  // },
   {
     parentLocation: '社区',
     childLocation: '浏览/观望',

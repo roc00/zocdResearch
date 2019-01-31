@@ -151,7 +151,7 @@ export const valsD = () => {
     }
   }
 
-  aim("/moduleD");
+  aim("/moduleE");
   return localStorage.setItem('moduleD', sum)
 }
 

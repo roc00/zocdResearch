@@ -13,7 +13,8 @@ export class ListA extends React.Component {
       return (
         <section id={'section-' + Number(dataA.indexOf(list) + 1)}>
           <h2 className="question">
-            {dataA.indexOf(list) + 1}. {list.title}
+          {/* {dataA.indexOf(list) + 1}.  */}
+            {list.title}
           </h2>
           <p className="example">{list.example}</p>
           <p className="path">
@@ -35,7 +36,8 @@ export class ListB extends React.Component {
       return (
         <section id={'section-' + Number(dataB.indexOf(list) + 1)}>
           <h2 className="question">
-            {dataB.indexOf(list) + 1}. {list.title}
+          {/* {dataB.indexOf(list) + 1}.  */}
+            {list.title}
           </h2>
           <p className="example">{list.example}</p>
           <p className="path">
@@ -57,7 +59,8 @@ export class ListC extends React.Component {
       return (
         <section id={'section-' + Number(dataC.indexOf(list) + 1)}>
           <h2 className="question">
-            {dataC.indexOf(list) + 1}. {list.title}
+          {/* {dataC.indexOf(list) + 1}.  */}
+            {list.title}
           </h2>
           <p className="example">{list.example}</p>
           <p className="path">
@@ -79,7 +82,8 @@ export class ListD extends React.Component {
       return (
         <section id={'section-' + Number(dataD.indexOf(list) + 1)}>
           <h2 className="question">
-            {dataD.indexOf(list) + 1}. {list.title}
+          {/* {dataD.indexOf(list) + 1}.  */}
+            {list.title}
           </h2>
           <p className="example">{list.example}</p>
           <p className="path">
@@ -101,7 +105,8 @@ export class ListE extends React.Component {
       return (
         <section id={'section-' + Number(dataE.indexOf(list) + 1)}>
           <h2 className="question">
-            {dataE.indexOf(list) + 1}. {list.title}
+          {/* {dataE.indexOf(list) + 1}.  */}
+            {list.title}
           </h2>
           <p className="example">{list.example}</p>
           <p className="path">

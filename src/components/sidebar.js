@@ -10,7 +10,7 @@ export class SideBarA extends React.Component {
   render() {
     const catalog = dataA.map(list => {
       return (
-        <a href={'#' + 'section-' + Number(dataA.indexOf(list) + 1)} target="_parent" className="sideNav">
+        <a href={'#' + 'section-' + Number(dataA.indexOf(list) + 1)} className="sideNav">
           <li className="sidebar-item">
             {/* {dataA.indexOf(list) + 1}.  */}
             {list.title}
@@ -22,7 +22,7 @@ export class SideBarA extends React.Component {
     return (
       <div className="sidebar">
         <p className="sidebar-indicator">
-          基础架构： <span id="current-amount">0</span>/{amountA}
+          已完成： <span id="current-amount">0</span>/{amountA}
         </p>
         <ul className="sidebar-list">{catalog}</ul>
       </div>
@@ -30,11 +30,13 @@ export class SideBarA extends React.Component {
   }
 }
 
+
+
 export class SideBarB extends React.Component {
   render() {
     const catalog = dataB.map(list => {
       return (
-        <a href={'#' + 'section-' + Number(dataB.indexOf(list) + 1)}>
+        <a href={'#' + 'section-' + Number(dataB.indexOf(list) + 1)} className="sideNav">
           <li className="sidebar-item">
             {dataB.indexOf(list) + 1}. {list.title}
           </li>
@@ -45,7 +47,7 @@ export class SideBarB extends React.Component {
     return (
       <div className="sidebar">
         <p className="sidebar-indicator">
-          基础架构： <span id="current-amount">0</span>/{amountB}
+          已完成： <span id="current-amount">0</span>/{amountB}
         </p>
         <ul className="sidebar-list">{catalog}</ul>
       </div>
@@ -57,7 +59,7 @@ export class SideBarC extends React.Component {
   render() {
     const catalog = dataC.map(list => {
       return (
-        <a href={'#' + 'section-' + Number(dataC.indexOf(list) + 1)}>
+        <a href={'#' + 'section-' + Number(dataC.indexOf(list) + 1)} className="sideNav">
           <li className="sidebar-item">
             {dataC.indexOf(list) + 1}. {list.title}
           </li>
@@ -68,7 +70,7 @@ export class SideBarC extends React.Component {
     return (
       <div className="sidebar">
         <p className="sidebar-indicator">
-          基础架构： <span id="current-amount">0</span>/{amountC}
+          已完成： <span id="current-amount">0</span>/{amountC}
         </p>
         <ul className="sidebar-list">{catalog}</ul>
       </div>
@@ -80,7 +82,7 @@ export class SideBarD extends React.Component {
   render() {
     const catalog = dataD.map(list => {
       return (
-        <a href={'#' + 'section-' + Number(dataD.indexOf(list) + 1)}>
+        <a href={'#' + 'section-' + Number(dataD.indexOf(list) + 1)} className="sideNav">
           <li className="sidebar-item">
             {dataD.indexOf(list) + 1}. {list.title}
           </li>
@@ -91,7 +93,7 @@ export class SideBarD extends React.Component {
     return (
       <div className="sidebar">
         <p className="sidebar-indicator">
-          基础架构： <span id="current-amount">0</span>/{amountD}
+          已完成： <span id="current-amount">0</span>/{amountD}
         </p>
         <ul className="sidebar-list">{catalog}</ul>
       </div>
@@ -103,7 +105,7 @@ export class SideBarE extends React.Component {
   render() {
     const catalog = dataE.map(list => {
       return (
-        <a href={'#' + 'section-' + Number(dataE.indexOf(list) + 1)}>
+        <a href={'#' + 'section-' + Number(dataE.indexOf(list) + 1)} className="sideNav">
           <li className="sidebar-item">
             {dataE.indexOf(list) + 1}. {list.title}
           </li>
@@ -114,7 +116,7 @@ export class SideBarE extends React.Component {
     return (
       <div className="sidebar">
         <p className="sidebar-indicator">
-          基础架构： <span id="current-amount">0</span>/{amountE}
+          已完成： <span id="current-amount">0</span>/{amountE}
         </p>
         <ul className="sidebar-list">{catalog}</ul>
       </div>

@@ -21,13 +21,15 @@ class IndexPage extends React.Component {
         <div className="main">
           <div className="main-content">
             <ListE />
-            <a href="/result">
+            {/* <a href="/result"> */}
               <Button buttonName="完成，查看结果" uniqueKey={valsE} />
-            </a>
+            {/* </a> */}
           </div>
+          <div className="a" />
           <div className="main-sidebar">
             <SideBarE />
           </div>
+          <div className="side-blank" />
         </div>
       </div>
     );

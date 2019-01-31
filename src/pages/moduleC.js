@@ -21,13 +21,15 @@ class IndexPage extends React.Component {
         <div className="main">
           <div className="main-content">
             <ListC />
-            <Link to="/moduleD/">
+            {/* <Link to="/moduleD/"> */}
               <Button buttonName="提交，进入下一个模块" uniqueKey={valsC} />
-            </Link>
+            {/* </Link> */}
           </div>
+          <div className="a" />
           <div className="main-sidebar">
             <SideBarC />
           </div>
+          <div className="side-blank" />
         </div>
       </div>
     );

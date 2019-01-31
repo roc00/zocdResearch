@@ -26,9 +26,11 @@ class IndexPage extends React.Component {
               <Button buttonName="提交，进入下一个模块" uniqueKey={valsA} />
             {/* </Link> */}
           </div>
+          <div className="a" />
           <div className="main-sidebar">
             <SideBarA />
           </div>
+          <div className="side-blank" />
         </div>
       </div>
     );

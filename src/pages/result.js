@@ -6,11 +6,11 @@ class IndexPage extends React.Component {
   render() {
     // const lengthA = .length;
 
-    const A = Number(localStorage.getItem("moduleA"));
-    const B = Number(localStorage.getItem("moduleB"));
-    const C = Number(localStorage.getItem("moduleC"));
-    const D = Number(localStorage.getItem("moduleD"));
-    const E = Number(localStorage.getItem("moduleE"));
+    const A = Number(typeof localStorage !== 'undefined' && localStorage.getItem("moduleA"));
+    const B = Number(typeof localStorage !== 'undefined' && localStorage.getItem("moduleB"));
+    const C = Number(typeof localStorage !== 'undefined' && localStorage.getItem("moduleC"));
+    const D = Number(typeof localStorage !== 'undefined' && localStorage.getItem("moduleD"));
+    const E = Number(typeof localStorage !== 'undefined' && localStorage.getItem("moduleE"));
     const total = A + B + C + D + E;
 
     const rateA = (A / 1770) * 100;

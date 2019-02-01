@@ -1,6 +1,7 @@
-import React from "react";
-// import Link from 'gatsby-link';
-import "../layouts/layout.css";
+import React from 'react'
+// import Link from 'gatsby-link'
+import '../layouts/layout.css'
+import '../layouts/scrollingNav.js'
 import Nav from "../components/header";
 import Button from "../components/button";
 import {ListA, ListB, ListC, ListD, ListE} from "../components/Item";

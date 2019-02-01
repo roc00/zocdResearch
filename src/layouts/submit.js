@@ -107,7 +107,7 @@ export const valsA = () => {
   }
 
   aim("/moduleB");
-  return localStorage.setItem('moduleA', sum)
+  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleA', sum)
 }
 
 //PageB
@@ -122,7 +122,7 @@ export const valsB = () => {
   }
 
   aim("/moduleC");
-  return localStorage.setItem('moduleB', sum)
+  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleB', sum)
 }
 
 //PageC
@@ -137,7 +137,7 @@ export const valsC = () => {
   }
 
   aim("/moduleD");
-  return localStorage.setItem('moduleC', sum)
+  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleC', sum)
 }
 
 //PageD
@@ -152,7 +152,7 @@ export const valsD = () => {
   }
 
   aim("/moduleE");
-  return localStorage.setItem('moduleD', sum)
+  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleD', sum)
 }
 
 //PageE
@@ -167,5 +167,5 @@ export const valsE = () => {
   }
 
   aim("/result");
-  return localStorage.setItem('moduleE', sum)
+  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleE', sum)
 }

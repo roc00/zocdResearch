@@ -1,8 +1,35 @@
 import React from "react";
+import {Radar} from 'react-chartjs-2';
 import "../layouts/layout.css";
+import "../layouts/resultChart.js";
 // import { moduleA, moduleB, moduleC, moduleD, moduleE } from "../layouts/submit";
 
 class IndexPage extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      chartData:{
+        labels: ["功能架构", "视觉设计", "交互设计", "运营", "品牌"],
+        datasets: [{
+        label: "App数据概览",
+        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        data: [80, 60, 52, 28, 48],
+        pointStyle: 'cirle',
+        
+        }]
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
   render() {
     // const lengthA = .length;
 
@@ -13,34 +40,69 @@ class IndexPage extends React.Component {
     const E = Number(typeof localStorage !== 'undefined' && localStorage.getItem("moduleE"));
     const total = A + B + C + D + E;
 
-    const rateA = (A / 1770) * 100;
-    const rateB = (B / 375) * 100;
-    const rateC = (C / 975) * 100;
-    const rateD = (D / 165) * 100;
-    const rateE = (E / 120) * 100;
-    const rateTotal = (total / 3405) * 100;
+    const amountA = Number(typeof localStorage !== 'undefined' && localStorage.getItem("AmountModuleA"));
+    const amountB = Number(typeof localStorage !== 'undefined' && localStorage.getItem("AmountModuleB"));
+    const amountC = Number(typeof localStorage !== 'undefined' && localStorage.getItem("AmountModuleC"));
+    const amountD = Number(typeof localStorage !== 'undefined' && localStorage.getItem("AmountModuleD"));
+    const amountE = Number(typeof localStorage !== 'undefined' && localStorage.getItem("AmountModuleE"));
+    const totalAmount = amountA + amountB + amountC + amountD + amountE;
+
+
+    const rateA = (A / amountA) * 100;
+    const rateB = (B / amountB) * 100;
+    const rateC = (C / amountC) * 100;
+    const rateD = (D / amountD) * 100;
+    const rateE = (E / amountE) * 100;
+    const rateTotal = (total / totalAmount) * 100;
+
 
     let level = "";
 
     switch (true) {
-      case total > 0 && total <= 681:
+      case total > 0 && total <= totalAmount*0.2:
         level = "工具";
         break;
-      case total > 681 && total <= 1362:
+      case total > totalAmount*0.2 && total <= totalAmount*0.4:
         level = "助手";
         break;
-      case total > 1362 && total <= 2043:
+      case total > totalAmount*0.4 && total <= totalAmount*0.6:
         level = "伙伴";
         break;
-      case total > 2043 && total <= 2724:
+      case total > totalAmount*0.6 && total <= totalAmount*0.8:
         level = "品牌";
         break;
-      case total > 2724 && total <= 3405:
+      case total > totalAmount*0.8 && total <= totalAmount:
         level = "情感";
         break;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
       <div className="result">
+        <Radar
+          data={this.state.chartData}
+          width={100}
+          height={50}
+          options={{
+            maintainAspectRatio: false
+          }}
+        />      
+
+
+
         <h1>
           APP总分为：{total}, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占总分数的：
           {rateTotal.toFixed(0)}%

@@ -97,8 +97,10 @@ const aim = ( link ) => {
 
 //PageA
 export const valsA = () => {
-  let objs = document.querySelectorAll('input[type=radio]')
-  let sum = 0
+  let objs = document.querySelectorAll('input[type=radio]');
+  let sec = document.querySelectorAll('section');
+  let amount = sec.length * 15;
+  let sum = 0;
 
   for (let obj of objs) {
     if (obj.checked) {
@@ -107,12 +109,17 @@ export const valsA = () => {
   }
 
   aim("/moduleB");
-  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleA', sum)
+
+
+  typeof localStorage !== 'undefined' && localStorage.setItem('moduleA', sum);
+  typeof localStorage !== 'undefined' && localStorage.setItem('AmountModuleA', amount);
 }
 
 //PageB
 export const valsB = () => {
   let objs = document.querySelectorAll('input[type=radio]');
+  let sec = document.querySelectorAll('section');
+  let amount = sec.length * 15;
   let sum = 0;
 
   for (let obj of objs) {
@@ -122,13 +129,18 @@ export const valsB = () => {
   }
 
   aim("/moduleC");
-  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleB', sum)
+  
+  
+  typeof localStorage !== 'undefined' && localStorage.setItem('moduleB', sum);
+  typeof localStorage !== 'undefined' && localStorage.setItem('AmountModuleB', amount);
 }
 
 //PageC
 export const valsC = () => {
-  let objs = document.querySelectorAll('input[type=radio]')
-  let sum = 0
+  let objs = document.querySelectorAll('input[type=radio]');
+  let sec = document.querySelectorAll('section');
+  let amount = sec.length * 15;
+  let sum = 0;
 
   for (let obj of objs) {
     if (obj.checked) {
@@ -137,13 +149,18 @@ export const valsC = () => {
   }
 
   aim("/moduleD");
-  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleC', sum)
+
+
+  typeof localStorage !== 'undefined' && localStorage.setItem('moduleC', sum);
+  typeof localStorage !== 'undefined' && localStorage.setItem('AmountModuleC', amount);
 }
 
 //PageD
 export const valsD = () => {
-  let objs = document.querySelectorAll('input[type=radio]')
-  let sum = 0
+  let objs = document.querySelectorAll('input[type=radio]');
+  let sec = document.querySelectorAll('section');
+  let amount = sec.length * 15;
+  let sum = 0;
 
   for (let obj of objs) {
     if (obj.checked) {
@@ -152,12 +169,17 @@ export const valsD = () => {
   }
 
   aim("/moduleE");
-  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleD', sum)
+
+  
+  typeof localStorage !== 'undefined' && localStorage.setItem('moduleD', sum);
+  typeof localStorage !== 'undefined' && localStorage.setItem('AmountModuleD', amount);
 }
 
 //PageE
 export const valsE = () => {
-  let objs = document.querySelectorAll('input[type=radio]')
+  let objs = document.querySelectorAll('input[type=radio]');
+  let sec = document.querySelectorAll('section');
+  let amount = sec.length * 15;
   let sum = 0
 
   for (let obj of objs) {
@@ -167,5 +189,8 @@ export const valsE = () => {
   }
 
   aim("/result");
-  return typeof localStorage !== 'undefined' && localStorage.setItem('moduleE', sum)
+  
+  
+  typeof localStorage !== 'undefined' && localStorage.setItem('moduleE', sum);
+  typeof localStorage !== 'undefined' && localStorage.setItem('AmountModuleE', amount);
 }

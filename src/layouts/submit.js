@@ -108,7 +108,8 @@ export const valsA = () => {
     }
   }
 
-  aim("/moduleB");
+  // aim("/moduleB");
+  aim("/");
 
 
   typeof localStorage !== 'undefined' && localStorage.setItem('moduleA', sum);
@@ -128,7 +129,8 @@ export const valsB = () => {
     }
   }
 
-  aim("/moduleC");
+  // aim("/moduleC");
+  aim("/");
   
   
   typeof localStorage !== 'undefined' && localStorage.setItem('moduleB', sum);
@@ -148,7 +150,8 @@ export const valsC = () => {
     }
   }
 
-  aim("/moduleD");
+  // aim("/moduleD");
+  aim("/");
 
 
   typeof localStorage !== 'undefined' && localStorage.setItem('moduleC', sum);
@@ -168,7 +171,8 @@ export const valsD = () => {
     }
   }
 
-  aim("/moduleE");
+  // aim("/moduleE");
+  aim("/");
 
   
   typeof localStorage !== 'undefined' && localStorage.setItem('moduleD', sum);
@@ -188,7 +192,8 @@ export const valsE = () => {
     }
   }
 
-  aim("/result");
+  // aim("/result");
+  aim("/");
   
   
   typeof localStorage !== 'undefined' && localStorage.setItem('moduleE', sum);

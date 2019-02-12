@@ -461,3 +461,101 @@ section {
 #checked{
   background: url('http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg') no-repeat -515px -24px;;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* choiceContent ------------------------------------------------ */
+.choice-content{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1068px;
+  color: #444;
+}
+.choice-content h1{
+  text-align: center;
+  font-size: 48px;
+  margin: 140px auto 0;
+}
+.choice-content p{
+  text-align: center;
+  font-size: 16px;
+  margin: 24px auto 92px;
+  line-height: 28px;
+}
+.choice-content a>div{
+  margin-left: auto;
+  margin-right: auto;
+}
+.choice-content .commit{
+  margin: 120px auto 40px;
+}
+
+.choice{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.choice p{
+  text-align: center;
+  margin: 12px auto;
+  font-weight: bold;
+  color: #444;
+}
+
+
+.feature, .interface, .interaction, .operation, .brand {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: 180px;
+  height: 240px;
+  background: var(--card-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 12px 0 rgba(198, 208, 235, 0.15);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+  line-height: 540px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.feature:hover, .interface:hover, .interaction:hover, .operation:hover, .brand:hover {
+  box-shadow: rgba(198, 208, 235, 0.5) 0px 30px 60px;
+  transform: scale3d(1.05, 1.05, 1);
+  background-position-y: -32px;
+}
+
+.feature:active, .interface:active, .interaction:active, .operation:active, .brand:active {
+  transform: translateY(2px);
+}
+
+.feature {
+  background: url(http://plpnhf0ux.bkt.clouddn.com/feature.jpg) center center / 220px 280px;
+  background-position: center center;
+}
+.interface {
+  background: url(http://plpnhf0ux.bkt.clouddn.com/interface.jpg) center center / 220px 280px;
+  background-position: center center;
+}
+.interaction {
+  background: url(http://plpnhf0ux.bkt.clouddn.com/interaction.jpg) center center / 220px 280px;
+  background-position: center center;
+}
+.operation {
+  background: url(http://plpnhf0ux.bkt.clouddn.com/operation.jpg) center center / 220px 280px;
+  background-position: center center;
+}
+.brand {
+  background: url(http://plpnhf0ux.bkt.clouddn.com/brand.jpg) center center / 220px 280px;
+  background-position: center center;
+}

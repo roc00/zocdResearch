@@ -92,14 +92,14 @@ class IndexPage extends React.Component {
 
     return (
       <div className="result">
-        <Radar
+        {/* <Radar
           data={this.state.chartData}
           width={100}
           height={50}
           options={{
             maintainAspectRatio: false
           }}
-        />      
+        />       */}
 
 
 

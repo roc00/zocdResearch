@@ -23,7 +23,7 @@ class IndexPage extends React.Component {
           <div className="main-content">
             <ListE />
             {/* <a href="/result"> */}
-              <Button buttonName="完成，查看结果" uniqueKey={valsE} />
+              <Button buttonName="提交" uniqueKey={valsE} />
             {/* </a> */}
           </div>
           <div className="a" />

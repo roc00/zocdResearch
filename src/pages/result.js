@@ -1,5 +1,6 @@
 import React from "react";
 import {Radar} from 'react-chartjs-2';
+import Link from 'gatsby-link'
 import "../layouts/layout.css";
 import "../layouts/resultChart.js";
 // import { moduleA, moduleB, moduleC, moduleD, moduleE } from "../layouts/submit";
@@ -104,36 +105,39 @@ class IndexPage extends React.Component {
 
 
         <h1>
-          APP总分为：{total}, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占总分数的：
+          APP总分为：{total} <br/>占总分数的：
           {rateTotal.toFixed(0)}%
         </h1>
         <br />
         <br />
         <h3>
           功能拓展的分数为：{A},
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占总分数的：{rateA.toFixed(0)}%
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占本项总分的：{rateA.toFixed(0)}%
         </h3>
         <h3>
           视觉设计的分数为：{B},
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占总分数的：{rateB.toFixed(0)}%
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占本项总分的：{rateB.toFixed(0)}%
         </h3>
         <h3>
           交互设计的分数为：{C},
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占总分数的：{rateC.toFixed(0)}%
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占本项总分的：{rateC.toFixed(0)}%
         </h3>
         <h3>
           运营策略的分数为：{D},
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占总分数的：{rateD.toFixed(0)}%
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占本项总分的：{rateD.toFixed(0)}%
         </h3>
         <h3>
           品牌推广的分数为：{E},
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占总分数的：{rateE.toFixed(0)}%
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;占本项总分的：{rateE.toFixed(0)}%
         </h3>
         <br />
         <h2>APP所处的等级为：{level}</h2>
         <br />
         <br />
-        <p>下一个版本将增加其他数据维度，并加入图形化展示</p>
+        {/* <p>下一个版本将增加其他数据维度，并加入图形化展示</p> */}
+        <Link to="/">
+        <span id='temporary'>返回到选择页面</span>
+          </Link>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import {Helmet} from "react-helmet";
 import Nav from '../components/header'
 import '../layouts/layout.css'
 import '../layouts/form.css'
@@ -12,6 +13,11 @@ class IndexPage extends React.Component {
 
     return (
       <div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>券商APP评测模型 | 卓奇体验设计咨询公司</title>
+                <link rel="canonical" href="http://www.zocdesign.net/" />
+            </Helmet>
       <Nav activedA={actived} progress={{ width: '0px' }} />
       <div className="choice-content">
         <h1>证券APP体验评测模型 Beta</h1>

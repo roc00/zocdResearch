@@ -66,7 +66,7 @@ a:active{
 }
 
 .image {
-  background: url("http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg") no-repeat -312px -12px;
+  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -312px -12px;
   width: 195px;
   height: 24px;
   margin-top: 18px;
@@ -258,19 +258,19 @@ section {
 }
 
 .item label:nth-child(1) span {
-  background: url("http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg") no-repeat
+  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat
     0 0;
 }
 .item label:nth-child(2) span {
-  background: url("http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg") no-repeat -78px
+  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -78px
     0;
 }
 .item label:nth-child(3) span {
-  background: url("http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg") no-repeat -156px
+  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -156px
     0;
 }
 .item label:nth-child(4) span {
-  background: url("http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg") no-repeat -234px
+  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -234px
     0;
 }
 
@@ -399,7 +399,7 @@ section {
   position: absolute;
   top: 11px;
   left: 10px;
-  /* background: url(http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg) no-repeat -538px -55px; */
+  /* background: url(https://zocdesign.nos-eastchina1.126.net/zocResearch.svg) no-repeat -538px -55px; */
   width: 6px;
   height: 6px;
   background: #f4003a;
@@ -409,7 +409,7 @@ section {
 
 
 .sidebar-item {
-  background: url('http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg') no-repeat -515px -2px;
+  background: url('https://zocdesign.nos-eastchina1.126.net/zocResearch.svg') no-repeat -515px -2px;
   padding: 4px 0 4px 40px;
 }
 
@@ -459,7 +459,7 @@ section {
   width: 600px;
 }
 #checked{
-  background: url('http://plpnhf0ux.bkt.clouddn.com/zocResearch.svg') no-repeat -515px -24px;;
+  background: url('https://zocdesign.nos-eastchina1.126.net/zocResearch.svg') no-repeat -515px -24px;;
 }
 
 
@@ -540,22 +540,32 @@ section {
 }
 
 .feature {
-  background: url(http://plpnhf0ux.bkt.clouddn.com/feature.jpg) center center / 220px 280px;
+  background: url(https://zocdesign.nos-eastchina1.126.net/feature.jpg) center center / 220px 280px;
   background-position: center center;
 }
 .interface {
-  background: url(http://plpnhf0ux.bkt.clouddn.com/interface.jpg) center center / 220px 280px;
+  background: url(https://zocdesign.nos-eastchina1.126.net/interface.jpg) center center / 220px 280px;
   background-position: center center;
 }
 .interaction {
-  background: url(http://plpnhf0ux.bkt.clouddn.com/interaction.jpg) center center / 220px 280px;
+  background: url(https://zocdesign.nos-eastchina1.126.net/interaction.jpg) center center / 220px 280px;
   background-position: center center;
 }
 .operation {
-  background: url(http://plpnhf0ux.bkt.clouddn.com/operation.jpg) center center / 220px 280px;
+  background: url(https://zocdesign.nos-eastchina1.126.net/operation.jpg) center center / 220px 280px;
   background-position: center center;
 }
 .brand {
-  background: url(http://plpnhf0ux.bkt.clouddn.com/brand.jpg) center center / 220px 280px;
+  background: url(https://zocdesign.nos-eastchina1.126.net/brand.jpg) center center / 220px 280px;
   background-position: center center;
+}
+
+
+
+#temporary{
+  color: var(--button-color);
+}
+
+#temporary:hover{
+  font-weight: bold;
 }

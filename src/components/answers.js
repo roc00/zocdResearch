@@ -7,25 +7,25 @@ export class Answers extends React.Component {
     return (
       <form className="item">
         <label className="answer">
-          没有
+          不好
           <input type="radio" name="point" value="0" onClick={submit} />
           <span className="checkmark" />
         </label>
         <label className="answer">
-          仅仅是有
+          不知道，没找到
           <input type="radio" name="point" value="5" onClick={submit} />
           <span className="checkmark" />
         </label>
         <label className="answer">
-          还不错
+          有，还不错
           <input type="radio" name="point" value="10" onClick={submit} />
           <span className="checkmark" />
         </label>
-        <label className="answer">
+        {/* <label className="answer">
           非常好
           <input type="radio" name="point" value="15" onClick={submit} />
           <span className="checkmark" />
-        </label>
+        </label> */}
       </form>
     );
   }

@@ -99,7 +99,7 @@ const aim = ( link ) => {
 export const valsA = () => {
   let objs = document.querySelectorAll('input[type=radio]');
   let sec = document.querySelectorAll('section');
-  let amount = sec.length * 15;
+  let amount = sec.length * 10;
   let sum = 0;
 
   for (let obj of objs) {
@@ -120,7 +120,7 @@ export const valsA = () => {
 export const valsB = () => {
   let objs = document.querySelectorAll('input[type=radio]');
   let sec = document.querySelectorAll('section');
-  let amount = sec.length * 15;
+  let amount = sec.length * 10;
   let sum = 0;
 
   for (let obj of objs) {
@@ -141,7 +141,7 @@ export const valsB = () => {
 export const valsC = () => {
   let objs = document.querySelectorAll('input[type=radio]');
   let sec = document.querySelectorAll('section');
-  let amount = sec.length * 15;
+  let amount = sec.length * 10;
   let sum = 0;
 
   for (let obj of objs) {
@@ -162,7 +162,7 @@ export const valsC = () => {
 export const valsD = () => {
   let objs = document.querySelectorAll('input[type=radio]');
   let sec = document.querySelectorAll('section');
-  let amount = sec.length * 15;
+  let amount = sec.length * 10;
   let sum = 0;
 
   for (let obj of objs) {
@@ -183,7 +183,7 @@ export const valsD = () => {
 export const valsE = () => {
   let objs = document.querySelectorAll('input[type=radio]');
   let sec = document.querySelectorAll('section');
-  let amount = sec.length * 15;
+  let amount = sec.length * 10;
   let sum = 0
 
   for (let obj of objs) {

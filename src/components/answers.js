@@ -7,17 +7,17 @@ export class Answers extends React.Component {
     return (
       <form className="item">
         <label className="answer">
-          不好
+          不好，或没找到
           <input type="radio" name="point" value="0" onClick={submit} />
           <span className="checkmark" />
         </label>
         <label className="answer">
-          不知道，没找到
+          还行
           <input type="radio" name="point" value="5" onClick={submit} />
           <span className="checkmark" />
         </label>
         <label className="answer">
-          有，还不错
+          优秀
           <input type="radio" name="point" value="10" onClick={submit} />
           <span className="checkmark" />
         </label>

@@ -16,7 +16,7 @@
   "scripts": {
     "patch": "sed -i -e 's/if(c\\.initial) return;/if(!c||c.initial) return;/g' ./node_modules/extract-text-webpack-plugin/index.js",
     "build": "npm run patch && gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --host=192.168.50.252",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "now-build": "npm run build"

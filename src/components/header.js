@@ -11,7 +11,7 @@ export class Header extends React.Component {
     return (
       <div className="nav">
         <div className="nav-content">
-          <a href="http://www.zocdesign.net/"  target="_blank" rel="noopener noreferrer">
+          <a href="/"   rel="noopener noreferrer">
             <div className="image" />
           </a>
           <div>

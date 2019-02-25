@@ -25,547 +25,1157 @@ body {
   margin: 0;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--text-color-regular);
-}
-
-a:hover{
-  color: var(--button-color) ;
-}
-
-a:active{
-  font-weight: bold;
-}
-
-
-
-/* header --------------------------------------------------  */
-
-.nav {
-  height: 60px;
-  width: 100%;
-  background: var(--card-color);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.04);
-}
-
-.nav-content {
-  width: 1068px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-
-.image {
-  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -312px -12px;
-  width: 195px;
-  height: 24px;
-  margin-top: 18px;
-  display: inline-block;
-}
-
-.nav-content div:nth-child(2) {
-  position: absolute;
-  right: 0px;
-  top: 18px;
-}
-
-.indicator {
-  width: 400px;
-  height: 4px;
-  background: var(--bg-color-sidebar);
-  border-radius: 4px;
-  position: relative;
-}
-
-.indicator div {
-  position: absolute;
-  height: 4px;
-  width: 80px;
-  background: var(--button-color);
-  border-radius: 4px;
-}
-
-.module {
-  padding: 0;
-  font-size: 12px;
-  margin: 4px 0 0 0;
-  color: var(--text-color-disable);
-  font-weight: 300;
-}
-
-.module li {
-  display: inline-block;
-  width: 80px;
-  text-align: right;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* title of each question --------------------------------------------------  */
-
-/* Question */
-section {
-  padding: 160px 0 0 0;
-}
-
-
-.question {
-  font-size: 28px;
-  max-width: 730px;
-  line-height: 40px;
-  margin: 0 0 4px 0;
-  font-weight: 400;
-  color: var(--text-color-title);
-}
-
-.example {
-  font-size: 16px;
-  line-height: 22px;
-  margin: 0;
-  max-width: 730px;
-}
-
-.path {
-  max-width: 730px;
-  border-bottom: 1px solid var(--bg-color-line);
-  font-size: 12px;
-  line-height: 20px;
-  margin: 16px 0 0 0;
-}
-
-.path span {
-  background: var(--bg-color-line);
-}
-
-.path span:nth-child(1) {
-  padding: 4px 16px 4px 12px;
-  position: relative;
-}
-.path span:nth-child(2) {
-  padding: 4px 20px 4px 12px;
-  position: relative;
-}
-
-.path span:nth-child(1)::after{
-  content: "";
-  width: 2px;
-  height: 22px;
-  position: absolute;
-  right: 3px;
-  top: 0px;
-  background: var(--bg-color-main);
-  transform: skew(20deg);
-}
-
-
-.path span:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-left: 10px solid transparent;
-  border-top: 22px solid var(--bg-color-main);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Cards of each question --------------------------------------------------  */
-
-/* Every item in model */
-.item {
-  width: 730px;
-  height: 268px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* The answer cards */
-.answer {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-  width: 160px;
-  height: 200px;
-  background: var(--card-color);
-  border-radius: 16px;
-  box-shadow: 0 8px 12px 0 rgba(198, 208, 235, 0.15);
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
-  line-height: 320px;
-  text-align: center;
-  font-weight: 400;
-  margin-top: 48px;
-}
-
-/* answer cards hover&active */
-.answer:hover {
-  box-shadow: rgba(198, 208, 235, 0.5) 0px 30px 60px;
-  transform: scale3d(1.05, 1.05, 1);
-  z-index: 1;
-}
-.answer:active {
-  transform: translateY(2px);
-  background: #fffdf5;
-}
-
-/* Hide the browser's default radio button */
-.answer input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* Create a custom radio button */
-.checkmark {
-  filter: saturate(0);
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  left: 56px;
-  top: 60px;
-  transition: all 0.3s;
-  border-radius: 50%;
-}
-
-.item label:nth-child(1) span {
-  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat
-    0 0;
-}
-.item label:nth-child(2) span {
-  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -78px
-    0;
-}
-.item label:nth-child(3) span {
-  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -156px
-    0;
-}
-.item label:nth-child(4) span {
-  background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -234px
-    0;
-}
-
-/* On mouse-over */
-.answer:hover input ~ .checkmark {
-  transform: scale3d(1.18, 1.18, 1);
-}
-
-/* When the radio button is checked, add a checked effect */
-.answer input:checked ~ .checkmark {
-  filter: saturate(1);
-  box-shadow: 0px 0px 0px 4px white, 0px 0px 0px 8px rgba(0, 0, 0, 0.07);
-}
-
-
-
-
-
-
-
-
 
 
 
 
 
 
-/* button --------------------------------------------------  */
-
-.button-area{
-  width: 730px;
-  height: 100%;
-}
-
-.commit{
-  width: 320px;
-  height: 60px;
-  background: var(--button-color);
-  border-radius: 40px;
-  text-align: center;
-  line-height: 60px;
-  color: var(--card-color);
-  margin: 240px auto 120px auto;
-  cursor: pointer;
-  box-shadow: 0 16px 48px -12px var(--front-color);
-  transition: all 0.3s; 
-  user-select: none;
-  text-decoration: none;
-}
-
-.commit:hover{
-  filter: brightness(1.12);
-  transform: translateY(-2px);
-  box-shadow: 0 16px 48px -8px var(--front-color);
-}
-
-.commit:active{
-  filter: brightness(0.95);
-  transform: translateY(2px);
-  box-shadow: 0 12px 24px -8px var(--front-color);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* sidebar --------------------------------------------------  */
-
-.sidebar {
-  /* width: 100vw; */
-  /* height: calc(100vh - 168px); */
-  /* background: var(--bg-color-sidebar); */
-  /* padding: 0 0 0 20px; */
-  height: 100%;
-}
-
-.sidebar-indicator{
-  font-size: 12px;
-  border-bottom: 1px solid #e6e6e6;
-  width: 258px;
-  margin: 0 0 0 20px;
-  padding: 20px 0 4px 0;
-  position: sticky;
-  top: 60px;
-  background: #f5f5f5;
-  z-index: 10;
-}
-
-.sidebar-list{
-  font-size: 12px;
-  line-height: 20px;
-  padding: 8px 0 0 0;
-  margin: 0;
-  overflow-y: auto;
-  height: calc(100vh - 97px);
-  position: sticky;
-  top: 102px;
-}
-.sidebar-list li{
-  /* position: sticky;
-  top: 0px; */
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-#current li{
-  /* background: #fff; */
-  font-weight: bold;
-  color: var(--button-color);
-  z-index: 10;
-  border-radius: 2px solid #ebebeb;
-  position: relative;
-}
-#current li::after{
-  content: '';
-  position: absolute;
-  top: 11px;
-  left: 10px;
-  /* background: url(https://zocdesign.nos-eastchina1.126.net/zocResearch.svg) no-repeat -538px -55px; */
-  width: 6px;
-  height: 6px;
-  background: #f4003a;
-  border-radius: 50%;
-}
-
-
-
-.sidebar-item {
-  background: url('https://zocdesign.nos-eastchina1.126.net/zocResearch.svg') no-repeat -515px -2px;
-  padding: 4px 0 4px 40px;
-}
-
-.sidebar-item:hover{
-  /* color: var(--button-color); */
-  /* cursor: pointer; */
-  /* box-shadow: 0 28px 0 0px var(--card-color) inset;
-  border-radius: 14px; */
-}
-
-.sidebar-list::-webkit-scrollbar {
-  width: 8px;
-}
- 
-.sidebar-list::-webkit-scrollbar-thumb {
-  background: var(--bg-color-sidebar);
-  border-radius: 4px;
-  transition: all 0.3s;
-}
-.sidebar-list:hover::-webkit-scrollbar-thumb {
-  background: var(--text-color-disable);
-  border-radius: 4px;
-}
-
-.sidebar-list::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* result --------------------------------------------------  */
-
-.result{
-  margin-left: auto;
-  margin-right: auto;
-  width: 600px;
-}
-#checked{
-  background: url('https://zocdesign.nos-eastchina1.126.net/zocResearch.svg') no-repeat -515px -24px;;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* choiceContent ------------------------------------------------ */
-.choice-content{
-  margin-left: auto;
-  margin-right: auto;
-  width: 1068px;
-  color: #444;
+/* @media queries, the screen >= 769px */
+@media only screen and (max-width: 768px) {
+
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text-color-regular);
+  }
+  
+  a:hover{
+    color: var(--button-color) ;
+  }
+  
+  a:active{
+    font-weight: bold;
+  }
+  
+  
+  
+  /* header --------------------------------------------------  */
+  
+  .nav {
+    height: 60px;
+    width: 100vw;
+    background: var(--card-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.04);
+  }
+  
+  .nav-content {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  
+  .image {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -312px -12px;
+    width: 195px;
+    height: 24px;
+    margin: 18px 0 0 16px;
+    display: inline-block;
+  }
+  
+  .nav-content div:nth-child(2) {
+    position: absolute;
+    right: 0px;
+    top: 18px;
+    display: none;
+  }
+  
+  .indicator {
+    width: 400px;
+    height: 4px;
+    background: var(--bg-color-sidebar);
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .indicator div {
+    position: absolute;
+    height: 4px;
+    width: 80px;
+    background: var(--button-color);
+    border-radius: 4px;
+  }
+  
+  .module {
+    padding: 0;
+    font-size: 12px;
+    margin: 4px 0 0 0;
+    color: var(--text-color-disable);
+    font-weight: 300;
+  }
+  
+  .module li {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* title of each question --------------------------------------------------  */
+  
+  /* Question */
+  section {
+    padding: 144px 0 0 0;
+  }
+  
+  
+  .question {
+    font-size: 18pt;
+    max-width: calc(100vw - 32px);
+    line-height: 26pt;
+    margin: 0 0 8px 16px;
+    font-weight: 400;
+    color: var(--text-color-title);
+  }
+  
+  .example {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 0 16px;
+    max-width: calc(100vw - 32px);
+  }
+  
+  .path {
+    border-bottom: 1px solid var(--bg-color-line);
+    max-width: calc(100vw - 32px);
+    font-size: 12px;
+    line-height: 20px;
+    margin: 16px 0 16px 16px;
+  }
+  
+  .path span {
+    background: var(--bg-color-line);
+  }
+  
+  .path span:nth-child(1) {
+    padding: 4px 16px 4px 12px;
+    position: relative;
+  }
+  .path span:nth-child(2) {
+    padding: 4px 20px 4px 12px;
+    position: relative;
+  }
+  
+  .path span:nth-child(1)::after{
+    content: "";
+    width: 2px;
+    height: 22px;
+    position: absolute;
+    right: 3px;
+    top: 0px;
+    background: var(--bg-color-main);
+    transform: skew(20deg);
+  }
+  
+  
+  .path span:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 10px solid transparent;
+    border-top: 22px solid var(--bg-color-main);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Cards of each question --------------------------------------------------  */
+  
+  /* Every item in model */
+  .item {
+    width: 100%;
+    height: 268px;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+  }
+  
+  /* The answer cards */
+  .answer {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: calc(100vw - 32px);
+    height: 96px;
+    background: var(--card-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 12px 0 rgba(198, 208, 235, 0.15);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+    line-height: 96px;
+    /* text-align: center; */
+    font-weight: 400;
+    margin: 8px 16px;
+    text-indent: 96px;
+    font-size: 16pt;
+  }
+  
+  /* answer cards hover&active */
+  .answer:hover {
+    box-shadow: rgba(198, 208, 235, 0.5) 0px 30px 60px;
+    transform: scale3d(1.05, 1.05, 1);
+    z-index: 1;
+  }
+  .answer:active {
+    transform: translateY(2px);
+    background: #fffdf5;
+  }
+  
+  /* Hide the browser's default radio button */
+  .answer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    filter: saturate(0);
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    transition: all 0.3s;
+    border-radius: 50%;
+  }
+  
+  .item label:nth-child(1) span {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat
+      0 0;
+  }
+  .item label:nth-child(2) span {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -78px
+      0;
+  }
+  .item label:nth-child(3) span {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -156px
+      0;
+  }
+  .item label:nth-child(4) span {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -234px
+      0;
+  }
+  
+  /* On mouse-over */
+  .answer:hover input ~ .checkmark {
+    transform: scale3d(1.18, 1.18, 1);
+  }
+  
+  /* When the radio button is checked, add a checked effect */
+  .answer input:checked ~ .checkmark {
+    filter: saturate(1);
+    box-shadow: 0px 0px 0px 4px white, 0px 0px 0px 8px rgba(0, 0, 0, 0.07);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* button --------------------------------------------------  */
+  
+  .button-area{
+    width: 100vw;
+    height: 100%;
+  }
+  
+  .commit{
+    width: calc(100vw - 32px);
+    height: 60px;
+    background: var(--button-color);
+    border-radius: 40px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    margin: 160px 16px 64px;
+    cursor: pointer;
+    box-shadow: 0 16px 48px -12px var(--front-color);
+    transition: all 0.3s; 
+    user-select: none;
+    text-decoration: none;
+  }
+  
+  .commit:hover{
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 48px -8px var(--front-color);
+  }
+  
+  .commit:active{
+    filter: brightness(0.95);
+    transform: translateY(2px);
+    box-shadow: 0 12px 24px -8px var(--front-color);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* sidebar --------------------------------------------------  */
+  
+  .sidebar {
+    /* width: 100vw; */
+    /* height: calc(100vh - 168px); */
+    /* background: var(--bg-color-sidebar); */
+    /* padding: 0 0 0 20px; */
+    height: 100%;
+  }
+  
+  .sidebar-indicator{
+    font-size: 12px;
+    border-bottom: 1px solid #e6e6e6;
+    width: 258px;
+    margin: 0 0 0 20px;
+    padding: 20px 0 4px 0;
+    position: sticky;
+    top: 60px;
+    background: #f5f5f5;
+    z-index: 10;
+  }
+  
+  .sidebar-list{
+    font-size: 12px;
+    line-height: 20px;
+    padding: 8px 0 0 0;
+    margin: 0;
+    overflow-y: auto;
+    height: calc(100vh - 97px);
+    position: sticky;
+    top: 102px;
+  }
+  .sidebar-list li{
+    /* position: sticky;
+    top: 0px; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  #current li{
+    /* background: #fff; */
+    font-weight: bold;
+    color: var(--button-color);
+    z-index: 10;
+    border-radius: 2px solid #ebebeb;
+    position: relative;
+  }
+  #current li::after{
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    /* background: url(https://zocdesign.nos-eastchina1.126.net/zocResearch.svg) no-repeat -538px -55px; */
+    width: 6px;
+    height: 6px;
+    background: #f4003a;
+    border-radius: 50%;
+  }
+  
+  
+  
+  .sidebar-item {
+    background: url('https://zocdesign.nos-eastchina1.126.net/zocResearch.svg') no-repeat -515px -2px;
+    padding: 4px 0 4px 40px;
+  }
+  
+  .sidebar-item:hover{
+    /* color: var(--button-color); */
+    /* cursor: pointer; */
+    /* box-shadow: 0 28px 0 0px var(--card-color) inset;
+    border-radius: 14px; */
+  }
+  
+  .sidebar-list::-webkit-scrollbar {
+    width: 8px;
+  }
+   
+  .sidebar-list::-webkit-scrollbar-thumb {
+    background: var(--bg-color-sidebar);
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  .sidebar-list:hover::-webkit-scrollbar-thumb {
+    background: var(--text-color-disable);
+    border-radius: 4px;
+  }
+  
+  .sidebar-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* result --------------------------------------------------  */
+  
+  .result{
+    margin: 0 auto 40px;
+    max-width: calc(100vw - 32px);
+  }
+  #checked{
+    background: url('https://zocdesign.nos-eastchina1.126.net/zocResearch.svg') no-repeat -515px -24px;;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* choiceContent ------------------------------------------------ */
+
+  .choice>a{
+    position: relative;
+    width: 100%;
+  }
+
+  .choice-content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    color: #444;
+  }
+  .choice-content h1{
+    /* text-align: center; */
+    font-size: 36px;
+    margin: 88px 0 0 16px;
+    max-width: calc(100vw - 32px);
+  }
+  .choice-content p{
+    font-size: 14px;
+    margin: 24px 16px 48px;
+    line-height: 18px;
+    color: #999;
+    max-width: calc(100vw - 32px);
+  }
+  
+  .choice-content .commit{
+    margin: 120px auto 40px;
+  }
+  
+  .choice{
+    display: flex;
+    /* flex-flow: row wrap;
+    justify-content: space-between; */
+    flex-direction: column;
+    width: 100vw;
+  }
+  .choice p{
+    color: var(--card-color);
+    position: absolute;
+    z-index: 5;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 96px;
+    margin: 0 0 0 120px;
+    top: 8px;
+    /* left: 16px; */
+  }
+  
+
+  
+  .feature, .interface, .interaction, .operation, .brand {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: calc(100vw - 32px);
+    height: 96px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 12px 0 rgba(198, 208, 235, .15);
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+    margin: 8px 16px;
+  }
+  
+  .feature:hover, .interface:hover, .interaction:hover, .operation:hover, .brand:hover {
+    box-shadow: rgba(198, 208, 235, 0.5) 0px 30px 60px;
+    transform: scale3d(1.05, 1.05, 1);
+    /* background-position-y: -32px; */
+  }
+  
+  .feature:active, .interface:active, .interaction:active, .operation:active, .brand:active {
+    transform: translateY(2px);
+  }
+  
+  .feature {
+    background: url(https://zocdesign.nos-eastchina1.126.net/featureMobile.jpg) left center / 768px 96px;
+  }
+  .interface {
+    background: url(https://zocdesign.nos-eastchina1.126.net/interfaceMobile.jpg) left center / 768px 96px;
+  }
+  .interaction {
+    background: url(https://zocdesign.nos-eastchina1.126.net/interactionMobile.jpg) left center / 768px 96px;
+  }
+  .operation {
+    background: url(https://zocdesign.nos-eastchina1.126.net/operationMobile.jpg) left center / 768px 96px;
+  }
+  .brand {
+    background: url(https://zocdesign.nos-eastchina1.126.net/brandMobile.jpg) left center / 768px 96px;
+  }
+  
+  
+  
+  #temporary{
+    color: var(--button-color);
+  }
+  
+  #temporary:hover{
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media queries, the screen >= 769px */
+
+@media only screen and (min-width: 769px){
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text-color-regular);
+  }
+  
+  a:hover{
+    color: var(--button-color) ;
+  }
+  
+  a:active{
+    font-weight: bold;
+  }
+  
+  
+  
+  /* header --------------------------------------------------  */
+  
+  .nav {
+    height: 60px;
+    width: 100%;
+    background: var(--card-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.04);
+  }
+  
+  .nav-content {
+    width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  
+  .image {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -312px -12px;
+    width: 195px;
+    height: 24px;
+    margin-top: 18px;
+    display: inline-block;
+  }
+  
+  .nav-content div:nth-child(2) {
+    position: absolute;
+    right: 0px;
+    top: 18px;
+  }
+  
+  .indicator {
+    width: 400px;
+    height: 4px;
+    background: var(--bg-color-sidebar);
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .indicator div {
+    position: absolute;
+    height: 4px;
+    width: 80px;
+    background: var(--button-color);
+    border-radius: 4px;
+  }
+  
+  .module {
+    padding: 0;
+    font-size: 12px;
+    margin: 4px 0 0 0;
+    color: var(--text-color-disable);
+    font-weight: 300;
+  }
+  
+  .module li {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* title of each question --------------------------------------------------  */
+  
+  /* Question */
+  section {
+    padding: 160px 0 0 0;
+  }
+  
+  
+  .question {
+    font-size: 28px;
+    max-width: 730px;
+    line-height: 40px;
+    margin: 0 0 4px 0;
+    font-weight: 400;
+    color: var(--text-color-title);
+  }
+  
+  .example {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    max-width: 730px;
+  }
+  
+  .path {
+    max-width: 730px;
+    border-bottom: 1px solid var(--bg-color-line);
+    font-size: 12px;
+    line-height: 20px;
+    margin: 16px 0 0 0;
+  }
+  
+  .path span {
+    background: var(--bg-color-line);
+  }
+  
+  .path span:nth-child(1) {
+    padding: 4px 16px 4px 12px;
+    position: relative;
+  }
+  .path span:nth-child(2) {
+    padding: 4px 20px 4px 12px;
+    position: relative;
+  }
+  
+  .path span:nth-child(1)::after{
+    content: "";
+    width: 2px;
+    height: 22px;
+    position: absolute;
+    right: 3px;
+    top: 0px;
+    background: var(--bg-color-main);
+    transform: skew(20deg);
+  }
+  
+  
+  .path span:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 10px solid transparent;
+    border-top: 22px solid var(--bg-color-main);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Cards of each question --------------------------------------------------  */
+  
+  /* Every item in model */
+  .item {
+    width: 730px;
+    height: 268px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* The answer cards */
+  .answer {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: 160px;
+    height: 200px;
+    background: var(--card-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 12px 0 rgba(198, 208, 235, 0.15);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+    line-height: 320px;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 48px;
+  }
+  
+  /* answer cards hover&active */
+  .answer:hover {
+    box-shadow: rgba(198, 208, 235, 0.5) 0px 30px 60px;
+    transform: scale3d(1.05, 1.05, 1);
+    z-index: 1;
+  }
+  .answer:active {
+    transform: translateY(2px);
+    background: #fffdf5;
+  }
+  
+  /* Hide the browser's default radio button */
+  .answer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    filter: saturate(0);
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 56px;
+    top: 60px;
+    transition: all 0.3s;
+    border-radius: 50%;
+  }
+  
+  .item label:nth-child(1) span {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat
+      0 0;
+  }
+  .item label:nth-child(2) span {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -78px
+      0;
+  }
+  .item label:nth-child(3) span {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -156px
+      0;
+  }
+  .item label:nth-child(4) span {
+    background: url("https://zocdesign.nos-eastchina1.126.net/zocResearch.svg") no-repeat -234px
+      0;
+  }
+  
+  /* On mouse-over */
+  .answer:hover input ~ .checkmark {
+    transform: scale3d(1.18, 1.18, 1);
+  }
+  
+  /* When the radio button is checked, add a checked effect */
+  .answer input:checked ~ .checkmark {
+    filter: saturate(1);
+    box-shadow: 0px 0px 0px 4px white, 0px 0px 0px 8px rgba(0, 0, 0, 0.07);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* button --------------------------------------------------  */
+  
+  .button-area{
+    width: 730px;
+    height: 100%;
+  }
+  
+  .commit{
+    width: 320px;
+    height: 60px;
+    background: var(--button-color);
+    border-radius: 40px;
+    text-align: center;
+    line-height: 60px;
+    color: var(--card-color);
+    margin: 240px auto 120px auto;
+    cursor: pointer;
+    box-shadow: 0 16px 48px -12px var(--front-color);
+    transition: all 0.3s; 
+    user-select: none;
+    text-decoration: none;
+  }
+  
+  .commit:hover{
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 48px -8px var(--front-color);
+  }
+  
+  .commit:active{
+    filter: brightness(0.95);
+    transform: translateY(2px);
+    box-shadow: 0 12px 24px -8px var(--front-color);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* sidebar --------------------------------------------------  */
+  
+  .sidebar {
+    /* width: 100vw; */
+    /* height: calc(100vh - 168px); */
+    /* background: var(--bg-color-sidebar); */
+    /* padding: 0 0 0 20px; */
+    height: 100%;
+  }
+  
+  .sidebar-indicator{
+    font-size: 12px;
+    border-bottom: 1px solid #e6e6e6;
+    width: 258px;
+    margin: 0 0 0 20px;
+    padding: 20px 0 4px 0;
+    position: sticky;
+    top: 60px;
+    background: #f5f5f5;
+    z-index: 10;
+  }
+  
+  .sidebar-list{
+    font-size: 12px;
+    line-height: 20px;
+    padding: 8px 0 0 0;
+    margin: 0;
+    overflow-y: auto;
+    height: calc(100vh - 97px);
+    position: sticky;
+    top: 102px;
+  }
+  .sidebar-list li{
+    /* position: sticky;
+    top: 0px; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  #current li{
+    /* background: #fff; */
+    font-weight: bold;
+    color: var(--button-color);
+    z-index: 10;
+    border-radius: 2px solid #ebebeb;
+    position: relative;
+  }
+  #current li::after{
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    /* background: url(https://zocdesign.nos-eastchina1.126.net/zocResearch.svg) no-repeat -538px -55px; */
+    width: 6px;
+    height: 6px;
+    background: #f4003a;
+    border-radius: 50%;
+  }
+  
+  
+  
+  .sidebar-item {
+    background: url('https://zocdesign.nos-eastchina1.126.net/zocResearch.svg') no-repeat -515px -2px;
+    padding: 4px 0 4px 40px;
+  }
+  
+  .sidebar-item:hover{
+    /* color: var(--button-color); */
+    /* cursor: pointer; */
+    /* box-shadow: 0 28px 0 0px var(--card-color) inset;
+    border-radius: 14px; */
+  }
+  
+  .sidebar-list::-webkit-scrollbar {
+    width: 8px;
+  }
+   
+  .sidebar-list::-webkit-scrollbar-thumb {
+    background: var(--bg-color-sidebar);
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  .sidebar-list:hover::-webkit-scrollbar-thumb {
+    background: var(--text-color-disable);
+    border-radius: 4px;
+  }
+  
+  .sidebar-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* result --------------------------------------------------  */
+  
+  .result{
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+  }
+  #checked{
+    background: url('https://zocdesign.nos-eastchina1.126.net/zocResearch.svg') no-repeat -515px -24px;;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* choiceContent ------------------------------------------------ */
+  .choice-content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1068px;
+    color: #444;
+  }
+  .choice-content h1{
+    text-align: center;
+    font-size: 48px;
+    margin: 140px auto 0;
+  }
+  .choice-content p{
+    text-align: center;
+    font-size: 16px;
+    margin: 24px auto 92px;
+    line-height: 28px;
+  }
+
+  .choice-content .commit{
+    margin: 120px auto 40px;
+  }
+  
+  .choice{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .choice p{
+    text-align: center;
+    margin: 12px auto;
+    font-weight: bold;
+    color: #444;
+  }
+  .choice-content a>div{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .feature, .interface, .interaction, .operation, .brand {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: 180px;
+    height: 240px;
+    background: var(--card-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 12px 0 rgba(198, 208, 235, 0.15);
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+    line-height: 540px;
+    text-align: center;
+    font-weight: 400;
+  }
+  
+  .feature:hover, .interface:hover, .interaction:hover, .operation:hover, .brand:hover {
+    box-shadow: rgba(198, 208, 235, 0.5) 0px 30px 60px;
+    transform: scale3d(1.05, 1.05, 1);
+    background-position-y: -32px;
+  }
+  
+  .feature:active, .interface:active, .interaction:active, .operation:active, .brand:active {
+    transform: translateY(2px);
+  }
+  
+  .feature {
+    background: url(https://zocdesign.nos-eastchina1.126.net/feature.jpg) center center / 220px 280px;
+    background-position: center center;
+  }
+  .interface {
+    background: url(https://zocdesign.nos-eastchina1.126.net/interface.jpg) center center / 220px 280px;
+    background-position: center center;
+  }
+  .interaction {
+    background: url(https://zocdesign.nos-eastchina1.126.net/interaction.jpg) center center / 220px 280px;
+    background-position: center center;
+  }
+  .operation {
+    background: url(https://zocdesign.nos-eastchina1.126.net/operation.jpg) center center / 220px 280px;
+    background-position: center center;
+  }
+  .brand {
+    background: url(https://zocdesign.nos-eastchina1.126.net/brand.jpg) center center / 220px 280px;
+    background-position: center center;
+  }
+  
+  
+  
+  #temporary{
+    color: var(--button-color);
+  }
+  
+  #temporary:hover{
+    font-weight: bold;
+  }
 }
-.choice-content h1{
-  text-align: center;
-  font-size: 48px;
-  margin: 140px auto 0;
-}
-.choice-content p{
-  text-align: center;
-  font-size: 16px;
-  margin: 24px auto 92px;
-  line-height: 28px;
-}
-.choice-content a>div{
-  margin-left: auto;
-  margin-right: auto;
-}
-.choice-content .commit{
-  margin: 120px auto 40px;
-}
-
-.choice{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-.choice p{
-  text-align: center;
-  margin: 12px auto;
-  font-weight: bold;
-  color: #444;
-}
-
-
-.feature, .interface, .interaction, .operation, .brand {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-  width: 180px;
-  height: 240px;
-  background: var(--card-color);
-  border-radius: 16px;
-  box-shadow: 0 8px 12px 0 rgba(198, 208, 235, 0.15);
-  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
-  line-height: 540px;
-  text-align: center;
-  font-weight: 400;
-}
-
-.feature:hover, .interface:hover, .interaction:hover, .operation:hover, .brand:hover {
-  box-shadow: rgba(198, 208, 235, 0.5) 0px 30px 60px;
-  transform: scale3d(1.05, 1.05, 1);
-  background-position-y: -32px;
-}
 
-.feature:active, .interface:active, .interaction:active, .operation:active, .brand:active {
-  transform: translateY(2px);
-}
-
-.feature {
-  background: url(https://zocdesign.nos-eastchina1.126.net/feature.jpg) center center / 220px 280px;
-  background-position: center center;
-}
-.interface {
-  background: url(https://zocdesign.nos-eastchina1.126.net/interface.jpg) center center / 220px 280px;
-  background-position: center center;
-}
-.interaction {
-  background: url(https://zocdesign.nos-eastchina1.126.net/interaction.jpg) center center / 220px 280px;
-  background-position: center center;
-}
-.operation {
-  background: url(https://zocdesign.nos-eastchina1.126.net/operation.jpg) center center / 220px 280px;
-  background-position: center center;
-}
-.brand {
-  background: url(https://zocdesign.nos-eastchina1.126.net/brand.jpg) center center / 220px 280px;
-  background-position: center center;
-}
-
-
-
-#temporary{
-  color: var(--button-color);
-}
-
-#temporary:hover{
-  font-weight: bold;
-}
